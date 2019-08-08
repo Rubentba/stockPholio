@@ -25,10 +25,12 @@ const userSchema = new Schema({
         default: Date.now
     },
     pie: {
-        type: Array
+        type: Schema.ObjectId,
+        ref: 'Graph'
     },
     wishlist: {
-        type: Array
+        type: Schema.ObjectId,
+        ref: 'User'
     }
 
 });
