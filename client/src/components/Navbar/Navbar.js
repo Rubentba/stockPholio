@@ -5,10 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import SignupButton from '../SignupButton/SignupButton';
 import LoginButton from '../LoginButton/LoginButton';
 import { styled } from '@material-ui/styles';
-import { fontSize } from '@material-ui/system';
 
 const Nav = styled(Appbar)({
-  background: 'white',
+  backgroundColor: '#f5f5f5',
   border: 0,
   opacity: 1,
   margin: 0,
@@ -22,6 +21,8 @@ const Word = styled(Typography)({
 
 
 
+
+
 function Navbar() {
   return (
     <div>
@@ -30,7 +31,7 @@ function Navbar() {
           <Word variant="Title" >
             Stockpholio
           </Word>
-          <div style={{ position: 'absolute', right: 0, marginRight: '5px' }}>
+          <div style={{ position: 'absolute', right: 15 }}>
             <SignupButton>
               Sign Up
           </SignupButton>

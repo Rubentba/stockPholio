@@ -6,7 +6,7 @@ const SignupButton = styled(Button)({
     border: 0,
     borderRadius: 3,
     color: 'white',
-    height: 64,
+    height: 36,
     padding: '0 30px'
 
 });

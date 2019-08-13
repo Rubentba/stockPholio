@@ -6,7 +6,7 @@ const LoginButton = styled(Button)({
     border: 0,
     borderRadius: 3,
     color: 'black',
-    height: 64,
+    height: 36,
     padding: '0 30px'
 });
 
