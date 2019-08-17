@@ -13,6 +13,10 @@ const graphSchema = new Schema({
     percentage: {
         type: Number,
         required: true
+    },
+    cashAmount: {
+        type: Number,
+        required: true
     }
 
 });
