@@ -2,7 +2,7 @@ const db = require('../models');
 
 module.exports = {
     findAll: function (req, res) {
-        db.Wishlist.findById(req.query)
+        db.Wishlist.find(req.query)
             .then(dbModelWishlist => res.json(dbModelWishlist))
             .catch(err => {
                 console.log(err);

@@ -7,6 +7,6 @@ router.route('/')
 
 router.route('/:id')
     .get(graphController.findById)
-    .update(graphController.update);
+    .put(graphController.update);
 
 module.exports = router;
