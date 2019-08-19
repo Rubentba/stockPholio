@@ -2,7 +2,7 @@ const db = require('../models');
 
 module.exports = {
     findAll: function (req, res) {
-        db.Graph.findById(req.query)
+        db.Graph.find(req.query)
             .then(dbModelGraph => res.json(dbModelGraph))
             .catch(err => {
                 console.log(err);

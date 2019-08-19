@@ -2,7 +2,7 @@ const router = require('express').Router();
 const graphController = require('../../controllers/graphController');
 
 router.route('/')
-    .get(graphController.find)
+    .get(graphController.findAll)
     .post(graphController.create);
 
 router.route('/:id')
