@@ -25,7 +25,7 @@ app.use(routes);
 
 // DB URL
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadlines';
+  process.env.MONGODB_URI || 'mongodb://Admin:Stockpholio1@ds311128.mlab.com:11128/heroku_2j5zjxx0';
 
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
