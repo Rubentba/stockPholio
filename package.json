@@ -1,0 +1,32 @@
+{
+  "name": "stockpholio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "materialize-css": "^1.0.0",
+    "react-materialize": "^3.3.4",
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.6.9",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rubentba/stockPholio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rubentba/stockPholio/issues"
+  },
+  "homepage": "https://github.com/Rubentba/stockPholio#readme"
+}

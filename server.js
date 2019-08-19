@@ -25,7 +25,7 @@ app.use(routes);
 
 // DB URL
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost/stockPholio';
+  process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadlines';
 
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
@@ -37,7 +37,7 @@ app.get('*', (req, res) => {
 });
 
 // Making sure the server is live.
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`App running on port ${PORT}!`);
 });
 
