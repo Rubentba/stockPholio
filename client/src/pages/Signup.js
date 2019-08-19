@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from '../components/Navbar';
 import RegisterForm from '../components/RegisterForm'
 
 
@@ -10,7 +10,7 @@ class Signup extends Component {
                 <Navbar />
                 <RegisterForm />
             </div>
-        )
+        );
     };
 };
 

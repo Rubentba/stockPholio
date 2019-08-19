@@ -1,12 +1,10 @@
 import React from 'react';
-import Appbar from '@material-ui/core/Appbar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import SignupButton from '../SignupButton/SignupButton';
-import LoginButton from '../LoginButton/LoginButton';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import SignupButton from '../SignupButton';
+import LoginButton from '../LoginButton';
 import { styled } from '@material-ui/styles';
 
-const Nav = styled(Appbar)({
+const Nav = styled(AppBar)({
   backgroundColor: '#f5f5f5',
   border: 0,
   opacity: 1,
@@ -19,14 +17,10 @@ const Word = styled(Typography)({
   fontSize: '24px'
 });
 
-
-
-
-
 function Navbar() {
   return (
     <div>
-      <Nav position="static">
+      <Nav position='static'>
         <Toolbar>
           <Word className='nav-link' href='/'>
             Stockpholio
@@ -43,6 +37,6 @@ function Navbar() {
       </Nav>
     </div>
   );
-}
+};
 
 export default Navbar;

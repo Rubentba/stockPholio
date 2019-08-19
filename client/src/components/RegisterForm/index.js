@@ -16,13 +16,13 @@ class RegisterForm extends Component {
         const { classes } = this.props;
         return (
             <div>
-                <Grid container justify="left">
-                    <Grid container justify="center">
+                <Grid container justify='left'>
+                    <Grid container justify='center'>
                         <Typography variant='h5'>
                             Welcome to StockPholio
                         </Typography>
                     </Grid>
-                    <Grid container justify="center">
+                    <Grid container justify='center'>
                         <Typography variant='h5'>
                             <p>- Create Custom Pies</p>
                             <p>- Follow Stocks</p>
@@ -30,31 +30,31 @@ class RegisterForm extends Component {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container justify="left">
+                <Grid container justify='left'>
                     <Card className={classes.padding}>
                         <div className={classes.margin}>
-                            <Grid container spacing={8} alignItems="flex-end">
+                            <Grid container spacing={8} alignItems='flex-end'>
                                 <Grid item>
                                     <Face />
                                 </Grid>
                                 <Grid item md={true} sm={true} xs={true}>
-                                    <TextField id="username" label="Email" type="email" fullWidth autoFocus required />
+                                    <TextField id='username' label='Email' type='email' fullWidth autoFocus required />
                                 </Grid>
                             </Grid>
-                            <Grid container spacing={8} alignItems="flex-end">
+                            <Grid container spacing={8} alignItems='flex-end'>
                                 <Grid item>
                                     <Fingerprint />
                                 </Grid>
                                 <Grid item md={true} sm={true} xs={true}>
-                                    <TextField id="username" label="Password" type="password" fullWidth required />
+                                    <TextField id='username' label='Password' type='password' fullWidth required />
                                 </Grid>
                             </Grid>
-                            <Grid container justify="center" style={{ marginTop: '10px' }}>
-                                <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Sign Up Now</Button>
+                            <Grid container justify='center' style={{ marginTop: '10px' }}>
+                                <Button variant='outlined' color='primary' style={{ textTransform: 'none' }}>Sign Up Now</Button>
                             </Grid>
-                            <Grid container alignItems="center" justify="space-between">
-                                <Grid item container justify="center">
-                                    <Button disableFocusRipple disableRipple style={{ textTransform: "none" }} variant="text" color="primary">Already have an account? Login</Button>
+                            <Grid container alignItems='center' justify='space-between'>
+                                <Grid item container justify='center'>
+                                    <Button disableFocusRipple disableRipple style={{ textTransform: 'none' }} variant='text' color='primary'>Already have an account? Login</Button>
                                 </Grid>
                             </Grid>
                         </div>
@@ -62,7 +62,7 @@ class RegisterForm extends Component {
                 </Grid>
             </div>
         )
-    }
-}
+    };
+};
 
 export default withStyles(styles)(RegisterForm);

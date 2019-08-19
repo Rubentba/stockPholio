@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar/Navbar'
-import Mparallax from '../components/Parallax/Parallax';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import Grid from '@material-ui/core/Grid';
+import Navbar from '../components/Navbar';
+import Mparallax from '../components/Parallax';
+import { CardContent, Typography, Card, Grid } from '@material-ui/core';
 import { TrendingUpRounded, PieChartRounded, DoneAllRounded } from '@material-ui/icons';
-
 
 class Home extends Component {
     render() {
@@ -68,8 +64,8 @@ class Home extends Component {
                     </div>
                 </div>
             </div >
-        )
-    }
-}
+        );
+    };
+};
 
 export default Home;
