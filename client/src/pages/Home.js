@@ -24,7 +24,9 @@ class Home extends Component {
                             <Grid item xs={4}>
                                 <Card style={{ height: '250px', marginBottom: '20px' }} >
                                     <CardContent>
-                                        <PieChartRounded style={{ height: 60, width: 60 }} />
+                                        <Grid container justify='center'>
+                                            <PieChartRounded style={{ height: 60, width: 60 }} />
+                                        </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Create Pies
                                         </Typography>
@@ -37,7 +39,9 @@ class Home extends Component {
                             <Grid item xs={4}>
                                 <Card style={{ height: '250px' }} >
                                     <CardContent>
-                                        <TrendingUpRounded style={{ height: 60, width: 60 }} />
+                                        <Grid container justify='center'>
+                                            <TrendingUpRounded style={{ height: 60, width: 60 }} />
+                                        </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Follow Stocks
                                         </Typography>
@@ -50,7 +54,9 @@ class Home extends Component {
                             <Grid item xs={4}>
                                 <Card style={{ height: '250px' }} >
                                     <CardContent>
-                                        <DoneAllRounded style={{ height: 60, width: 60 }} />
+                                        <Grid container justify='center'>
+                                            <DoneAllRounded style={{ height: 60, width: 60 }} />
+                                        </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Save Time
                                         </Typography>
