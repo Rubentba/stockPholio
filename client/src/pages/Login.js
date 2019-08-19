@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar/Navbar';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import LoginForm from '../components/LoginForm'
 
 
 class Login extends Component {
     render() {
         return (
-            <Grid>
+            <div>
                 <Navbar />
-                <Paper>
-                    Hi
-                </Paper>
-            </Grid>
+                <LoginForm />
+            </div>
         )
     };
 };

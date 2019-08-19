@@ -28,16 +28,16 @@ function Navbar() {
     <div>
       <Nav position="static">
         <Toolbar>
-          <Word>
-            <a style={{}} className='nav-link' href='/'>Google Book Search</a>
+          <Word className='nav-link' href='/'>
+            Stockpholio
           </Word>
           <div style={{ position: 'absolute', right: 15 }}>
-            <SignupButton>
+            <SignupButton className='nav-link' href='/signup'>
               Sign Up
-          </SignupButton>
-            <LoginButton>
+            </SignupButton>
+            <LoginButton className='nav-link' href='/login'>
               Login
-          </LoginButton>
+            </LoginButton>
           </div>
         </Toolbar>
       </Nav>
