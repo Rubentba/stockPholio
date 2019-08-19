@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 
 
-class Wishlist extends Component {
+class Dashboard extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class Wishlist extends Component {
     };
 };
 
-export default Wishlist;
+export default Dashboard;
