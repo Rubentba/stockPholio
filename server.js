@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
 const routes = require('./routes');
-const config = require('config')
+const config = require('config');
 
 // For Heroku
 const PORT = process.env.PORT || 3000;

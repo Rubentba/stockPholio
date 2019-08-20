@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const wishlistController = require('../../controllers/wishlistController');
+const auth = require('../../middleware/auth');
 
 router.route('/')
-    .get(wishlistController.findAll)
-    .post(wishlistController.create);
+    .get(auth, wishlistController.findAll)
+    .post(auth, wishlistController.create);
 
 router.route('/:id')
-    .get(wishlistController.findById)
-    .put(wishlistController.update);
+    .get(auth, wishlistController.findById)
+    .put(auth, wishlistController.update);
 
 module.exports = router;

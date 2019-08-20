@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const graphController = require('../../controllers/graphController');
+const auth = require('../../middleware/auth');
 
 router.route('/')
-    .get(graphController.findAll)
-    .post(graphController.create);
+    .get(auth, graphController.findAll)
+    .post(auth, graphController.create);
 
 router.route('/:id')
-    .get(graphController.findById)
-    .put(graphController.update);
+    .get(auth, graphController.findById)
+    .put(auth, graphController.update);
 
 module.exports = router;
