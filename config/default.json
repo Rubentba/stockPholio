@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://Admin:Stockpholio1@ds311128.mlab.com:11128/heroku_2j5zjxx0",
+  "jwtSecret": "sp_myjwtsecret"
+}

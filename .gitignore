@@ -1,3 +1,8 @@
+# Config
+/config
+config/
+.config
+
 # ENV
 .env
 
