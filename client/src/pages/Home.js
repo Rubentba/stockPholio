@@ -30,7 +30,7 @@ class Home extends Component {
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Create Pies
                                         </Typography>
-                                        <Typography variant='p' style={{ fontSize: '20px', textAlign: 'center' }}>
+                                        <Typography style={{ fontSize: '20px', textAlign: 'center' }}>
                                             Create Pies for superior stock allocation between accounts or for personal use.
                                         </Typography>
                                     </CardContent>
@@ -45,7 +45,7 @@ class Home extends Component {
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Follow Stocks
                                         </Typography>
-                                        <Typography variant='p' style={{ fontSize: '20px', textAlign: 'center' }}>
+                                        <Typography style={{ fontSize: '20px', textAlign: 'center' }}>
                                             Get the data you need when you need it for the stocks you are currently tracking.
                                         </Typography>
                                     </CardContent>
@@ -60,7 +60,7 @@ class Home extends Component {
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Save Time
                                         </Typography>
-                                        <Typography variant='p' style={{ fontSize: '20px', textAlign: 'center' }}>
+                                        <Typography style={{ fontSize: '20px', textAlign: 'center' }}>
                                             Instead of spending hours grueling over a spreadsheet, use Stockpholio to save precious time.
                                         </Typography>
                                     </CardContent>
