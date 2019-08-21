@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
 import Mparallax from '../components/Parallax';
 import { CardContent, Typography, Card, Grid } from '@material-ui/core';
 import { TrendingUpRounded, PieChartRounded, DoneAllRounded } from '@material-ui/icons';
@@ -8,7 +7,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Mparallax />
                 <div style={{ background: '#f5f5f5' }}>
                     <div style={{ width: '100%' }}>

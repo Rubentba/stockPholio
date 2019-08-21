@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Link, Grid } from '@material-ui/core';
 import SignupButton from '../SignupButton';
 import LoginButton from '../LoginButton';
 import { styled } from '@material-ui/styles';
@@ -34,10 +34,18 @@ class Navbar extends Component {
 
     const authLinks = (
       <Fragment>
-        <Typography style={{ color: '#03a9f4' }}>
-          {user ? `Welcome, ${user.username}` : ''}
-        </Typography>
-        <Logout />
+        <Grid container justify='space-evenly'>
+          <Typography style={{ color: '#03a9f4', marginTop: 6 }}>
+            {user ? `Welcome, ${user.username}` : ''}
+          </Typography>
+          <LoginButton style={{ backgroundColor: '#f5f5f5' }} className='nav-link' href='/wishlist'>
+            Wishlist
+          </LoginButton>
+          <LoginButton style={{ backgroundColor: '#f5f5f5' }} className='nav-link' href='/dashboard'>
+            Dashboard
+          </LoginButton>
+          <Logout />
+        </Grid>
       </Fragment>
     );
 

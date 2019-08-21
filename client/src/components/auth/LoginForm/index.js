@@ -110,7 +110,7 @@ class LoginForm extends Component {
                                     } label='Remember me!' />
                                 </Grid>
                                 <Grid container justify='center' style={{ marginTop: '10px' }}>
-                                    <LoginFormButton label='Submit' type='submit' className='nav-link' href='/dashboard'>Login</LoginFormButton>
+                                    <LoginFormButton label='Submit' type='submit' className='nav-link'>Login</LoginFormButton>
                                 </Grid>
                             </Grid>
                             <Grid container justify='center' style={{ marginTop: '10px' }}>

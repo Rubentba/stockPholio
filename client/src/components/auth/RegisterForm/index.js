@@ -106,7 +106,7 @@ class RegisterForm extends Component {
                                 </Grid>
                                 <Grid container spacing={8} alignItems='flex-end'>
                                     <Grid item md={true} sm={true} xs={true}>
-                                        <TextField id='email' label='Email' type='text' placeholder='Email' onChange={this.onChange} fullWidth autoFocus required />
+                                        <TextField id='email' label='Email' type='email' placeholder='Email' onChange={this.onChange} fullWidth autoFocus required />
                                     </Grid>
                                 </Grid>
                                 <Grid container spacing={8} alignItems='flex-end'>
@@ -115,7 +115,7 @@ class RegisterForm extends Component {
                                     </Grid>
                                 </Grid>
                                 <Grid container justify='center' style={{ marginTop: '24px' }}>
-                                    <SignupFormButton label='Submit' type='submit' className='nav-link' href='/dashboard'>Sign Up Now</SignupFormButton>
+                                    <SignupFormButton label='Submit' type='submit' className='nav-link'>Sign Up Now</SignupFormButton>
                                 </Grid>
                                 <Grid container justify='center' style={{ marginTop: '10px' }}>
                                     <Typography>

@@ -6,7 +6,7 @@ class Wishlist extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+
             </div>
         );
     };

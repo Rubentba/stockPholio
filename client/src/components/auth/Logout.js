@@ -15,7 +15,8 @@ export class Logout extends Component {
                 <LoginButton
                     onClick={this.props.logout}
                     className='nav-link'
-                    href='/login'>
+                    href='/login'
+                    style={{ backgroundColor: '#f5f5f5' }}>
                     Log Out
                 </LoginButton>
             </Fragment>

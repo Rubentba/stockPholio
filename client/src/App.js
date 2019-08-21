@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/authActions'
+import Nav from './components/Navbar'
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
       <Provider store={store} >
         <Router>
           <div>
+            <Nav />
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/homepage' component={Home} />
