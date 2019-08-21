@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path='/homepage' component={Home} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
+              <Route exact path='/dashboard' component={Dashboard} />
             </Switch>
             <Footer />
           </div>

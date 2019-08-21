@@ -12,20 +12,20 @@ class Home extends Component {
                 <Mparallax />
                 <div style={{ background: '#f5f5f5' }}>
                     <div style={{ width: '100%' }}>
-                        <Typography style={{ textAlign: 'center', fontSize: '40px', paddingTop: '20px' }}>
+                        <Typography style={{ textAlign: 'center', fontSize: '40px', paddingTop: '20px', marginBottom: 20 }}>
                             Stop Using Spreadsheets
                         </Typography>
                         <Typography style={{ textAlign: 'center', fontSize: '20px' }}>
-                            Keeping track of your investments shoudln't be a hassle. Spreedsheets are a thing of the past. Welcome Stockpholio, the new, easy way to keep track of your portfolio.
+                            Keeping track of your investments shouldn't be a hassle. Spreedsheets are a thing of the past. Welcome Stockpholio, the new, easy way to keep track of your portfolio.
                         </Typography>
                     </div>
-                    <div style={{ marginTop: 20, marginLeft: 20, marginRight: 20 }}>
+                    <div style={{ marginTop: 40, marginLeft: 20, marginRight: 20 }}>
                         <Grid container spacing={3}>
                             <Grid item xs={4}>
-                                <Card style={{ height: '250px', marginBottom: '20px' }} >
+                                <Card style={{ height: '250px', marginBottom: '40px' }} >
                                     <CardContent>
                                         <Grid container justify='center'>
-                                            <PieChartRounded style={{ height: 60, width: 60 }} />
+                                            <PieChartRounded style={{ height: 60, width: 60, marginBottom: 20 }} />
                                         </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Create Pies
@@ -40,7 +40,7 @@ class Home extends Component {
                                 <Card style={{ height: '250px' }} >
                                     <CardContent>
                                         <Grid container justify='center'>
-                                            <TrendingUpRounded style={{ height: 60, width: 60 }} />
+                                            <TrendingUpRounded style={{ height: 60, width: 60, marginBottom: 20 }} />
                                         </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Follow Stocks
@@ -55,7 +55,7 @@ class Home extends Component {
                                 <Card style={{ height: '250px' }} >
                                     <CardContent>
                                         <Grid container justify='center'>
-                                            <DoneAllRounded style={{ height: 60, width: 60 }} />
+                                            <DoneAllRounded style={{ height: 60, width: 60, marginBottom: 20 }} />
                                         </Grid>
                                         <Typography variant='h1' style={{ fontSize: '24px', textAlign: 'center', marginBottom: 10 }}>
                                             Save Time

@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
-import { Paper, withStyles, Grid, TextField, Button, FormControlLabel, Checkbox, Typography } from '@material-ui/core';
-import { Face, Fingerprint } from '@material-ui/icons';
+import { Paper, withStyles, Grid, TextField, Button, FormControlLabel, Checkbox, Typography, Link } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { login } from '../../../actions/authActions';
+import { clearErrors } from '../../../actions/errorActions';
+import { styled } from '@material-ui/styles';
+
+const Word = styled(Link)({
+    color: '#03a9f4'
+});
+
+const LoginFormButton = styled(Button)({
+    background: '#03a9f4',
+    border: 0,
+    borderRadius: 3,
+    color: 'white',
+    height: 36,
+    width: '80%',
+    padding: '0 30px'
+});
 
 const styles = theme => ({
     margin: {
@@ -12,6 +30,50 @@ const styles = theme => ({
 });
 
 class LoginForm extends Component {
+    state = {
+        email: '',
+        password: '',
+        msg: null
+    };
+
+    componentDidUpdate(previousProps) {
+        const { error } = this.props;
+        if (error !== previousProps.error) {
+            // Check for login error
+            if (error.id === 'LOGIN_FAIL') {
+                this.setState({ msg: error.msg.msg })
+            } else {
+                this.setState({ msg: null })
+            }
+        }
+    };
+
+    static propTypes = {
+        isAuthenticated: PropTypes.bool,
+        error: PropTypes.object.isRequired,
+        login: PropTypes.func.isRequired,
+        clearErrors: PropTypes.func.isRequired
+    };
+
+    onChange = event => {
+
+        this.setState({ [event.target.id]: event.target.value })
+    };
+
+    onSubmit = event => {
+        event.preventDefault();
+
+        const { email, password } = this.state;
+
+        const user = {
+            email,
+            password
+        }
+
+        // Attempt to login
+        this.props.login(user);
+    };
+
     render() {
         const { classes } = this.props;
         return (
@@ -26,47 +88,49 @@ class LoginForm extends Component {
                         Log in to your account
                     </Typography>
                 </Grid>
-                <Paper className={classes.padding} style={{ marginBottom: 60, marginTop: 40 }}>
-                    <div className={classes.margin}>
-                        <Grid container spacing={8} alignItems='flex-end'>
-                            <Grid item>
-                                <Face />
+                <Grid container justify='center'>
+                    <Paper className={classes.padding} style={{ marginBottom: 60, marginTop: 40, maxWidth: 420, height: 276 }}>
+                        <form className={classes.margin} onSubmit={this.onSubmit}>
+                            <Grid container spacing={8} alignItems='flex-end'>
+                                <Grid item md={true} sm={true} xs={true}>
+                                    <TextField id='email' label='Email' type='text' placeholder='Email' onChange={this.onChange} fullWidth autoFocus required />
+                                </Grid>
                             </Grid>
-                            <Grid item md={true} sm={true} xs={true}>
-                                <TextField id='username' label='Email' type='email' fullWidth autoFocus required />
+                            <Grid container spacing={8} alignItems='flex-end'>
+                                <Grid item md={true} sm={true} xs={true}>
+                                    <TextField id='password' label='Password' type='password' placeholder='Password' onChange={this.onChange} fullWidth required />
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid container spacing={8} alignItems='flex-end'>
-                            <Grid item>
-                                <Fingerprint />
-                            </Grid>
-                            <Grid item md={true} sm={true} xs={true}>
-                                <TextField id='username' label='Password' type='password' fullWidth required />
-                            </Grid>
-                        </Grid>
-                        <Grid container alignItems='center' justify='space-between'>
-                            <Grid item>
-                                <FormControlLabel control={
-                                    <Checkbox
-                                        color='primary'
-                                    />
-                                } label='Remember me!' />
+                            <Grid container alignItems='center' justify='space-between'>
+                                <Grid item>
+                                    <FormControlLabel control={
+                                        <Checkbox
+                                            color='primary'
+                                        />
+                                    } label='Remember me!' />
+                                </Grid>
+                                <Grid container justify='center' style={{ marginTop: '10px' }}>
+                                    <LoginFormButton label='Submit' type='submit' className='nav-link' href='/dashboard'>Login</LoginFormButton>
+                                </Grid>
                             </Grid>
                             <Grid container justify='center' style={{ marginTop: '10px' }}>
-                                <Button variant='outlined' color='primary' style={{ textTransform: 'none' }}>Login</Button>
+                                <Typography>
+                                    <Word className='nav-link' href='/signup'>
+                                        New? Sign Up
+                                    </Word>
+                                </Typography>
                             </Grid>
-                            <Grid item container justify='center' style={{ marginTop: '10px' }}>
-                                <Button disableFocusRipple disableRipple style={{ textTransform: 'none' }} variant='text' color='primary'>Forgot password ?</Button>
-                            </Grid>
-                        </Grid>
-                        <Grid container justify='center' style={{ marginTop: '10px' }}>
-                            <Button disableFocusRipple disableRipple style={{ textTransform: 'none' }} variant='text' color='primary'>New? Sign Up</Button>
-                        </Grid>
-                    </div>
-                </Paper>
+                        </form>
+                    </Paper>
+                </Grid>
             </div >
         );
     };
 };
 
-export default withStyles(styles)(LoginForm);
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated,
+    error: state.error
+});
+
+export default connect(mapStateToProps, { login, clearErrors })(withStyles(styles)(LoginForm));

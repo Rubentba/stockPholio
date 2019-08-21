@@ -1,9 +1,11 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import React, { Component, Fragment } from 'react';
+import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
 import SignupButton from '../SignupButton';
 import LoginButton from '../LoginButton';
 import { styled } from '@material-ui/styles';
-import Logout from '../auth/Logout'
+import Logout from '../auth/Logout';
+import propTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const Nav = styled(AppBar)({
   backgroundColor: '#f5f5f5',
@@ -13,32 +15,64 @@ const Nav = styled(AppBar)({
   padding: 0
 });
 
-const Word = styled(Typography)({
+const Word = styled(Link)({
   color: '#03a9f4',
   fontSize: '24px'
 });
 
-function Navbar() {
-  return (
-    <div>
-      <Nav position='static'>
-        <Toolbar>
-          <Word className='nav-link' href='/'>
-            Stockpholio
-          </Word>
-          <div style={{ position: 'absolute', right: 15 }}>
-            <SignupButton className='nav-link' href='/signup'>
-              Sign Up
-            </SignupButton>
-            <LoginButton className='nav-link' href='/login'>
-              Login
-            </LoginButton>
-            <Logout />
-          </div>
-        </Toolbar>
-      </Nav>
-    </div>
-  );
+class Navbar extends Component {
+  state = {
+
+  };
+
+  static propTypes = {
+    auth: propTypes.object.isRequired
+  };
+
+  render() {
+    const { isAuthenticated, user } = this.props.auth;
+
+    const authLinks = (
+      <Fragment>
+        <Typography style={{ color: '#03a9f4' }}>
+          {user ? `Welcome, ${user.username}` : ''}
+        </Typography>
+        <Logout />
+      </Fragment>
+    );
+
+    const guestLinks = (
+      <Fragment>
+        <SignupButton className='nav-link' href='/signup'>
+          Sign Up
+        </SignupButton>
+        <LoginButton className='nav-link' href='/login'>
+          Login
+        </LoginButton>
+      </Fragment>
+    );
+
+    return (
+      <div>
+        <Nav position='static'>
+          <Toolbar>
+            <Typography>
+              <Word className='nav-link' href='/'>
+                StockPholio
+              </Word>
+            </Typography>
+            <div style={{ position: 'absolute', right: 15 }}>
+              {isAuthenticated ? authLinks : guestLinks}
+            </div>
+          </Toolbar>
+        </Nav>
+      </div>
+    );
+  };
 };
 
-export default Navbar;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, null)(Navbar);

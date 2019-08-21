@@ -1,18 +1,22 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
+import { styled } from '@material-ui/styles';
+import Button from '@material-ui/core/Button';
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center'
-};
-const insideStyles = {
+const SignupFormButton = styled(Button)({
   background: '#03a9f4',
   color: 'white',
   padding: 20,
   position: 'absolute',
   top: '70%',
   left: '15%',
-  transform: 'translate(-50%,-50%)'
+  transform: 'translate(-50%,-50%)',
+  fontSize: 16
+});
+
+const styles = {
+  fontFamily: 'sans-serif',
+  textAlign: 'center'
 };
 const welcomeStyles = {
   color: '#03a9f4',
@@ -43,7 +47,7 @@ const Mparallax = () => {
           <div style={{ position: 'absolute', left: '15%', top: '15%', height: '400px', width: '400px' }}>
             <p style={welcomeStyles}> Welcome to Stockpholio</p>
             <p style={blurbStyles}> The simple stock portfolio tracker for the DIY investor.</p>
-            <div style={insideStyles}>TRY FOR FREE - SIGN UP</div>
+            <SignupFormButton className='nav-link' href='/signup'>TRY FOR FREE - SIGN UP</SignupFormButton>
           </div>
         </div>
       </Parallax>
