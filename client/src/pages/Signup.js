@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
-import RegisterForm from '../components/RegisterForm'
+import RegisterForm from '../components/auth/RegisterForm'
 
 
 class Signup extends Component {
