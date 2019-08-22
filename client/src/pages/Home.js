@@ -14,7 +14,7 @@ class Home extends Component {
                             Stop Using Spreadsheets
                         </Typography>
                         <Typography style={{ textAlign: 'center', fontSize: '20px' }}>
-                            Keeping track of your investments shouldn't be a hassle. Spreedsheets are a thing of the past. Welcome Stockpholio, the new, easy way to keep track of your portfolio.
+                            Keeping track of your investments shouldn't be a hassle. Spreadsheets are a thing of the past. Welcome Stockpholio, the new, easy way to keep track of your portfolio.
                         </Typography>
                     </div>
                     <div style={{ marginTop: 40, marginLeft: 20, marginRight: 20 }}>

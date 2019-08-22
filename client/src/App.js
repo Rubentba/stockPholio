@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Wishlist from './pages/Wishlist';
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -28,6 +29,7 @@ class App extends Component {
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/dashboard' component={Dashboard} />
+              <Route exact path='/wishlist' component={Wishlist} />
             </Switch>
             <Footer />
           </div>
