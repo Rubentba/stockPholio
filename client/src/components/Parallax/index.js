@@ -28,7 +28,7 @@ const welcomeStyles = {
   transform: 'translate(-50%,-50%)'
 };
 const blurbStyles = {
-  color: 'black',
+  color: 'white',
   position: 'absolute',
   textAlign: 'left',
   fontSize: '25px',
@@ -37,7 +37,7 @@ const blurbStyles = {
   transform: 'translate(-50%,-50%)'
 };
 const image1 =
-  'https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D';
+  'https://media.beam.usnews.com/46/19/5c6c54fb4c6f812dc85c20fc656a/141106-portfolio-stock.jpg';
 
 const Mparallax = () => {
   return (
