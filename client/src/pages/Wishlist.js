@@ -20,6 +20,18 @@ class Wishlist extends Component {
 
     componentWillMount() {
         this.getChartData()
+
+        stockThis = function (stock) {
+            if (!stock) {
+                stock = "MSFT"
+            }
+
+
+            let url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&interval=5minoutputsize=compact&apikey=YI9E8YRIHLKB5KZS`
+            axios.get(url).then(function (response) {
+
+            })
+        }
     };
 
     getChartData() {
