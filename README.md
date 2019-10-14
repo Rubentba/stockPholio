@@ -6,7 +6,6 @@ A stock tracker and portfolio allocation viewer. Once an user creates an account
 
 ## Technologies
 
-- MERN stack
 - MongoDB
 - Express
 - React
